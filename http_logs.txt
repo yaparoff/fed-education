@@ -1,12 +1,9 @@
-Çàïðîñ POST: https://api.github.com/repos/yaparoff/fed-education/issues
+Ð—Ð°Ð¿Ñ€Ð¾Ñ POST: https://api.github.com/repos/yaparoff/fed-education/issues
 {
-
 "title": "test issues",
-
 "body": "test lorem ipsum"
-
 }
-Îòâåò:
+ÐžÑ‚Ð²ÐµÑ‚:
 Access-Control-Allow-Origin >*
 Access-Control-Expose-Headers >ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
 Cache-Control >private, max-age=60, s-maxage=60
@@ -73,11 +70,11 @@ X-XSS-Protection >1; mode=block
   "closed_by": null
 }
 
-Çàïðîñ POST: https://api.github.com/repos/yaparoff/fed-education/issues/2/comments
+Ð—Ð°Ð¿Ñ€Ð¾Ñ POST: https://api.github.com/repos/yaparoff/fed-education/issues/2/comments
 {
 "body": "test comment"
 }
-Îòâåò:
+ÐžÑ‚Ð²ÐµÑ‚:
 Access-Control-Allow-Origin >*
 Access-Control-Expose-Headers >ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
 Cache-Control >private, max-age=60, s-maxage=60
