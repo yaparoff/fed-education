@@ -1,0 +1,131 @@
+Запрос POST: https://api.github.com/repos/yaparoff/fed-education/issues
+{
+
+"title": "test issues",
+
+"body": "test lorem ipsum"
+
+}
+Ответ:
+Access-Control-Allow-Origin >*
+Access-Control-Expose-Headers >ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Cache-Control >private, max-age=60, s-maxage=60
+Content-Length >1631
+Content-Security-Policy >default-src 'none'
+Content-Type >application/json; charset=utf-8
+Date >Tue, 04 Apr 2017 12:37:46 GMT
+ETag >"0a0963f4e2e0cff2f5853d45381e2e7b"
+Location >https://api.github.com/repos/yaparoff/fed-education/issues/2
+Server >GitHub.com
+Status >201 Created
+Strict-Transport-Security >max-age=31536000; includeSubdomains; preload
+X-Accepted-OAuth-Scopes >
+X-Content-Type-Options >nosniff
+X-Frame-Options >deny
+X-GitHub-Media-Type >github.v3; format=json
+X-GitHub-Request-Id >D732:230E:426065E:54F5015:58E3939A
+X-OAuth-Scopes >admin:repo_hook, delete_repo, repo
+X-RateLimit-Limit >5000
+X-RateLimit-Remaining >4999
+X-RateLimit-Reset >1491313066
+X-Served-By >2c18a09f3ac5e4dd1e004af7c5a94769
+X-XSS-Protection >1; mode=block
+{
+  "url": "https://api.github.com/repos/yaparoff/fed-education/issues/2",
+  "repository_url": "https://api.github.com/repos/yaparoff/fed-education",
+  "labels_url": "https://api.github.com/repos/yaparoff/fed-education/issues/2/labels{/name}",
+  "comments_url": "https://api.github.com/repos/yaparoff/fed-education/issues/2/comments",
+  "events_url": "https://api.github.com/repos/yaparoff/fed-education/issues/2/events",
+  "html_url": "https://github.com/yaparoff/fed-education/issues/2",
+  "id": 219236277,
+  "number": 2,
+  "title": "test issues",
+  "user": {
+    "login": "yaparoff",
+    "id": 11623581,
+    "avatar_url": "https://avatars0.githubusercontent.com/u/11623581?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yaparoff",
+    "html_url": "https://github.com/yaparoff",
+    "followers_url": "https://api.github.com/users/yaparoff/followers",
+    "following_url": "https://api.github.com/users/yaparoff/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yaparoff/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yaparoff/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yaparoff/subscriptions",
+    "organizations_url": "https://api.github.com/users/yaparoff/orgs",
+    "repos_url": "https://api.github.com/users/yaparoff/repos",
+    "events_url": "https://api.github.com/users/yaparoff/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yaparoff/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "labels": [],
+  "state": "open",
+  "locked": false,
+  "assignee": null,
+  "assignees": [],
+  "milestone": null,
+  "comments": 0,
+  "created_at": "2017-04-04T12:37:46Z",
+  "updated_at": "2017-04-04T12:37:46Z",
+  "closed_at": null,
+  "body": "test lorem ipsum",
+  "closed_by": null
+}
+
+Запрос POST: https://api.github.com/repos/yaparoff/fed-education/issues/2/comments
+{
+"body": "test comment"
+}
+Ответ:
+Access-Control-Allow-Origin >*
+Access-Control-Expose-Headers >ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+Cache-Control >private, max-age=60, s-maxage=60
+Content-Length >1241
+Content-Security-Policy >default-src 'none'
+Content-Type >application/json; charset=utf-8
+Date >Tue, 04 Apr 2017 12:40:47 GMT
+ETag >"a1774be09c8aaccc7d7973a24dd61f4d"
+Location >https://api.github.com/repos/yaparoff/fed-education/issues/comments/291487199
+Server >GitHub.com
+Status >201 Created
+Strict-Transport-Security >max-age=31536000; includeSubdomains; preload
+X-Accepted-OAuth-Scopes >public_repo, repo
+X-Content-Type-Options >nosniff
+X-Frame-Options >deny
+X-GitHub-Media-Type >github.v3; format=json
+X-GitHub-Request-Id >D839:230C:3FB1887:5184E36:58E3944E
+X-OAuth-Scopes >admin:repo_hook, delete_repo, repo
+X-RateLimit-Limit >5000
+X-RateLimit-Remaining >4998
+X-RateLimit-Reset >1491313066
+X-Served-By >15bc4ab707db6d6b474783868c7cc828
+X-XSS-Protection >1; mode=block
+{
+  "url": "https://api.github.com/repos/yaparoff/fed-education/issues/comments/291487199",
+  "html_url": "https://github.com/yaparoff/fed-education/issues/2#issuecomment-291487199",
+  "issue_url": "https://api.github.com/repos/yaparoff/fed-education/issues/2",
+  "id": 291487199,
+  "user": {
+    "login": "yaparoff",
+    "id": 11623581,
+    "avatar_url": "https://avatars0.githubusercontent.com/u/11623581?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yaparoff",
+    "html_url": "https://github.com/yaparoff",
+    "followers_url": "https://api.github.com/users/yaparoff/followers",
+    "following_url": "https://api.github.com/users/yaparoff/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yaparoff/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yaparoff/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yaparoff/subscriptions",
+    "organizations_url": "https://api.github.com/users/yaparoff/orgs",
+    "repos_url": "https://api.github.com/users/yaparoff/repos",
+    "events_url": "https://api.github.com/users/yaparoff/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yaparoff/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created_at": "2017-04-04T12:40:47Z",
+  "updated_at": "2017-04-04T12:40:47Z",
+  "body": "test comment"
+}
