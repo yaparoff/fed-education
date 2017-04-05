@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Navigator</title>
+		<style>
+			body,
+			html {
+				font-size: 18px;
+			}
+			.top-menu {
+				display: block;
+				width: 400px;
+				margin: 0 auto;
+			}
+			.top-menu a {
+				margin-left: 5px;
+			}
+			.bold-text {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="top-menu">
+			<a href="navigator.html">Navigator</a>
+			<a href="screen.html">Screen</a>
+			<a href="location.html">Location</a>
+			<a href="window.html">Window</a>
+		</nav>
+		<h1>Navigator</h1>
+		<div id="browserName"></div>
+		<div id="browserName2"></div>
+		<br>
+		<div id="version"></div>
+		<script>
+			var browserName = document.querySelector('#browserName');
+			var browserName2 = document.querySelector('#browserName2');
+			var version = document.querySelector('#version');
+			
+			if (navigator.userAgent.search('Chrome') != -1 ) {
+				browserName.innerHTML = '<span class="bold-text">Browser name: </span>' + navigator.userAgent;
+				version.innerHTML = '<span class="bold-text">Version: </span>' + navigator.appVersion;
+			} else if (navigator.userAgent.search('Firefox') != -1 ) {
+				browserName.innerHTML = '<span class="bold-text">Browser name: </span>' + navigator.appName;
+				version.innerHTML = '<span class="bold-text">Cookie Enabled: </span>' + navigator.cookieEnabled;
+			} else if (navigator.userAgent.search('NET') != -1 ) {
+				document.write(navigator.platform + '<br>');
+				
+				function success(position) {
+					var latitude = position.coords.latitude;
+					var longitude = position.coords.longitude;
+					 
+					document.write('Platform: ' + navigator.platform + '<br>' + 'Широта: ' + latitude + '<br/>' + 'Долгота: ' + longitude + '<br/>');
+				};
+
+				function error(obj) {
+					alert('Ошибка при определении положения');
+				};
+				navigator.geolocation.getCurrentPosition(success, error);
+			} else {
+				document.write('Браузер не определён');
+			}
+			
+			
+		</script>
+	</body>
+</html>
