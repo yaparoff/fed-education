@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    	<link rel="stylesheet" href="style.css">
+    	<title>Location</title>
+  	</head>
+  	<body>
+  		<nav class="top-menu">
+			<a href="navigator.html">Navigator</a>
+			<a href="screen.html">Screen</a>
+			<a href="location.html">Location</a>
+			<a href="window.html">Window</a>
+		</nav>
+		<h1>Location</h1>
+		<ul class="features">
+			<li class="feature">
+				<div class="feature-name">hash</div>
+				<div class="feature-wrapper">
+					<div class="feature-description">
+<!--						<div class="close">X</div>-->
+						<h3>hash</h3>
+						<p>часть URL содержащая якори</p>
+						<p><i>hash.hostname</i></p>
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-name">search</div>
+				<div class="feature-wrapper">
+					<div class="feature-description">
+<!--						<div class="close">X</div>-->
+						<h3>search</h3>
+						<p>часть URL, содержащит строку с параметрами (?параметр1=значение1&параметр2=значение2&...);</p>
+						<p><i>search.hostname</i></p>
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-name">hostname</div>
+				<div class="feature-wrapper">
+					<div class="feature-description">
+<!--						<div class="close">X</div>-->
+						<h3>hostname</h3>
+						<p>возвращает или устанавливает имя хоста</p>
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-name">href</div>
+				<div class="feature-wrapper">
+					<div class="feature-description">
+<!--						<div class="close">X</div>-->
+						<h3>href</h3>
+						<p>устанавливает или возвращает содержимое URL</p>
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-name">pathname</div>
+				<div class="feature-wrapper">
+					<div class="feature-description">
+<!--						<div class="close">X</div>-->
+						<h3>pathname</h3>
+						<p>устанавливает или возвращает часть URL, содержащей путь</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+		<script>
+			var features = document.querySelector('.features');
+			
+			features.addEventListener('click', function(event) {
+				var target = event.target;
+//				var	close = target.classList.contains('close');
+//				if (target.classList.contains('feature-description') && !close) break;
+				while(target != features) {
+					if (target.classList.contains('feature')) {
+						target.querySelector('.feature-wrapper').classList.toggle('visible');
+						break;
+					}
+				}
+				
+			});
+		</script>
+  	</body>
+</html>
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    	<link rel="stylesheet" href="style.css">
+    	<title>Window</title>
+  	</head>
+  	<body>
+  		<nav class="top-menu">
+			<a href="navigator.html">Navigator</a>
+			<a href="screen.html">Screen</a>
+			<a href="location.html">Location</a>
+			<a href="window.html">Window</a>
+		</nav>
+		<h1>Window</h1>
+			<div class="size">
+				Размер окна со скроллбаром:
+				<div id="size"></div>
+				<br>
+				<br>
+				Размер окна без скроллбара:
+				<div id="availSize"></div>
+			</div>
+		<script>
+			var size = document.querySelector('#size');
+			var availSize = document.querySelector('#availSize');
+			
+			size.innerHTML = 'Ширина экрана: ' + window.screen.width + 'px' +'<br>' + 'Высота экрана: ' + window.screen.height + 'px';
+			availSize.innerHTML = 'Ширина экрана: ' + window.screen.availWidth + 'px' +'<br>' + 'Высота экрана: ' + window.screen.availHeight + 'px';
+		</script>
+  	</body>
+</html>
+
+
+
+
