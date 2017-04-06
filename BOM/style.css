@@ -13,11 +13,11 @@ h1 {
 }
 .top-menu {
 	display: block;
-	width: 400px;
+	width: 300px;
 	margin: 0 auto;
 }
 .top-menu a {
-	margin-left: 5px;
+	margin-right: 5px;
 }
 .bold-text {
 	font-weight: bold;
@@ -89,4 +89,10 @@ h1 {
 	padding: 10px;
 	background-color: slategray;
 	color: #fff;
+}
+.params {
+	width: 600px;
+	margin: 50px auto;
+	border: 1px solid gray;
+	padding: 20px 10px;
 }
