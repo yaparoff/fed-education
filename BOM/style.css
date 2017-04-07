@@ -12,6 +12,7 @@ h1 {
 	text-align: center;
 }
 .top-menu {
+	position: relative;
 	display: block;
 	width: 300px;
 	margin: 0 auto;
@@ -19,6 +20,29 @@ h1 {
 .top-menu a {
 	margin-right: 5px;
 }
+.top-menu #historyBack {
+	position: absolute;
+	top: 0;
+	left: -45px;
+	cursor: pointer;
+}
+.top-menu #historyForward {
+	position: absolute;
+	top: 0;
+	right: -30px;
+	cursor: pointer;
+}
+#history {
+	position: fixed;
+	top: 0;
+	right: 2px;
+	width: 225px;
+	padding: 10px;
+	background-color: darkslategray;
+	color: #fff;
+	text-align: center;
+}
+
 .bold-text {
 	font-weight: bold;
 }

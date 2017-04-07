@@ -7,34 +7,36 @@
     	<title>Window</title>
   	</head>
   	<body>
-  		<ul class="top-menu">
+  		<nav class="top-menu">
+  			<a id="historyBack"><<</a>
 			<a href="navigator.html">Navigator</a>
 			<a href="screen.html">Screen</a>
 			<a href="location.html">Location</a>
 			<a href="window.html">Window</a>
-		</ul>
+			<a id="historyForward">>></a>
+		</nav>
 		<h1>Window</h1>
-			<div class="size">
-				Размер окна со скроллбаром:
-				<div id="size"></div>
-				<br>
-				<br>
-				Размер окна без скроллбара:
-				<div id="availSize"></div>
-			</div>
-			<div class="params">
-				<label>
-					Ширина: 
-					<input type="text" id="windowWidth"/>
-				</label>	
-				<label>
-					Высота: 
-					<input type="text" id="windowHeight"/>
-				</label>
-				<button id="openWindow">Открыть окно</button>
-			</div>
+		<div class="size">
+			Размер окна со скроллбаром:
+			<div id="size"></div>
+			<br>
+			<br>
+			Размер окна без скроллбара:
+			<div id="availSize"></div>
+		</div>
+		<div class="params">
+			<label>
+				Ширина: 
+				<input type="text" id="windowWidth"/>
+			</label>	
+			<label>
+				Высота: 
+				<input type="text" id="windowHeight"/>
+			</label>
+			<button id="openWindow">Открыть окно</button>
+		</div>
+		<script src="script.js"></script>
 		<script>
-			
 			var openWindow = document.querySelector('#openWindow');
 			
 			function openNewWindow() {
@@ -50,6 +52,7 @@
 			
 			size.innerHTML = 'Ширина экрана: ' + window.screen.width + 'px' +'<br>' + 'Высота экрана: ' + window.screen.height + 'px';
 			availSize.innerHTML = 'Ширина экрана: ' + window.screen.availWidth + 'px' +'<br>' + 'Высота экрана: ' + window.screen.availHeight + 'px';
+			
 		</script>
   	</body>
 </html>
