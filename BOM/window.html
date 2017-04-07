@@ -7,12 +7,12 @@
     	<title>Window</title>
   	</head>
   	<body>
-  		<nav class="top-menu">
+  		<ul class="top-menu">
 			<a href="navigator.html">Navigator</a>
 			<a href="screen.html">Screen</a>
 			<a href="location.html">Location</a>
 			<a href="window.html">Window</a>
-		</nav>
+		</ul>
 		<h1>Window</h1>
 			<div class="size">
 				Размер окна со скроллбаром:
@@ -22,7 +22,29 @@
 				Размер окна без скроллбара:
 				<div id="availSize"></div>
 			</div>
+			<div class="params">
+				<label>
+					Ширина: 
+					<input type="text" id="windowWidth"/>
+				</label>	
+				<label>
+					Высота: 
+					<input type="text" id="windowHeight"/>
+				</label>
+				<button id="openWindow">Открыть окно</button>
+			</div>
 		<script>
+			
+			var openWindow = document.querySelector('#openWindow');
+			
+			function openNewWindow() {
+				var windowWidth = document.getElementById('windowWidth').value;
+				var windowHeight = document.getElementById('windowHeight').value;
+				var newWin = window.open('http://epam.com', 'about:blank', 'hello', 'width=windowWidth,height=windowHeight');
+				newWin.resizeTo(windowWidth, windowHeight);
+			}
+			openWindow.addEventListener('click', openNewWindow);
+		
 			var size = document.querySelector('#size');
 			var availSize = document.querySelector('#availSize');
 			

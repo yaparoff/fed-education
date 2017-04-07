@@ -19,7 +19,7 @@
 				<div class="feature-name">hash</div>
 				<div class="feature-wrapper">
 					<div class="feature-description">
-<!--						<div class="close">X</div>-->
+						<div class="close">X</div>
 						<h3>hash</h3>
 						<p>часть URL содержащая якори</p>
 						<p><i>hash.hostname</i></p>
@@ -30,7 +30,7 @@
 				<div class="feature-name">search</div>
 				<div class="feature-wrapper">
 					<div class="feature-description">
-<!--						<div class="close">X</div>-->
+						<div class="close">X</div>
 						<h3>search</h3>
 						<p>часть URL, содержащит строку с параметрами (?параметр1=значение1&параметр2=значение2&...);</p>
 						<p><i>search.hostname</i></p>
@@ -41,7 +41,7 @@
 				<div class="feature-name">hostname</div>
 				<div class="feature-wrapper">
 					<div class="feature-description">
-<!--						<div class="close">X</div>-->
+						<div class="close">X</div>
 						<h3>hostname</h3>
 						<p>возвращает или устанавливает имя хоста</p>
 					</div>
@@ -51,7 +51,7 @@
 				<div class="feature-name">href</div>
 				<div class="feature-wrapper">
 					<div class="feature-description">
-<!--						<div class="close">X</div>-->
+						<div class="close">X</div>
 						<h3>href</h3>
 						<p>устанавливает или возвращает содержимое URL</p>
 					</div>
@@ -61,7 +61,7 @@
 				<div class="feature-name">pathname</div>
 				<div class="feature-wrapper">
 					<div class="feature-description">
-<!--						<div class="close">X</div>-->
+						<div class="close">X</div>
 						<h3>pathname</h3>
 						<p>устанавливает или возвращает часть URL, содержащей путь</p>
 					</div>
@@ -74,20 +74,24 @@
 			
 			features.addEventListener('click', function(event) {
 				var target = event.target;
-//				var	close = target.classList.contains('close');
-//				if (target.classList.contains('feature-description') && !close) break;
-				while(target != features) {
+				
+				
+				if (target != features) {
 					if (target.classList.contains('feature-name')) {
-						target.querySelector('.feature-wrapper').classList.toggle('visible');
-						break;
+						var a = target.nextSibling.nextSibling;
+						var	close = target.nextSibling.nextSibling.firstElementChild.firstElementChild;
+						
+						if (a.classList.contains('feature-wrapper')) {
+							a.classList.toggle('visible');
+						}
+						close.addEventListener('click', function() {
+							a.classList.toggle('visible');
+						});
 					}
+					
 				}
 				
 			});
 		</script>
   	</body>
 </html>
-
-
-
-
