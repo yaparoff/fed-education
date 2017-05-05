@@ -1,0 +1,166 @@
+.categories-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+	
+.category {
+	position: relative;
+	display: block;
+	width: 23%;
+	height: 350px;
+	margin-right: 2%;
+	margin-bottom: 20px;
+	border: 1px solid $gray;
+	text-decoration: none;
+
+	&:hover {
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		transition: 0.4s;
+		
+		.category__title {
+			background-color: $dark-gray;
+			transition: 0.4s;
+			text-shadow: 1px 1px 1px #273c4a;
+		}
+	}
+	&__image {
+		padding: 10px;
+
+		img {
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	&__title {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		padding: 15px 0;
+		color: $gray;
+		text-align: center;
+		background-color: $gray;
+		color: #fff;
+	}
+	&__quantity {
+		color: #fff;
+	}
+}
+	
+@media(max-width: 1380px) {
+		
+	.category {
+		height: 270px;
+
+		&__title {
+			font-size: 16px;
+			padding: 11px 0;
+		}
+	}
+		
+}
+
+@media(max-width: 1160px) {
+	
+	.category {
+		height: 240px;
+	}
+}
+
+@media(max-width: 1000px) {
+		
+	.category {
+		height: 240px;
+
+		&:hover {
+			box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+
+@media(max-width: 900px) {
+		
+	.category {
+		height: 215px;
+	}
+	
+}
+
+@media(max-width: 800px) {
+		
+	.category {
+		width: 30%;
+		height: 245px;
+	}
+}
+
+@media(max-width: 710px) {
+		
+	.category {
+		width: 30%;
+		height: 215px;
+		
+		&__title {
+			font-size: 15px;
+		}
+	}
+	
+}
+
+@media(max-width: 650px) {
+		
+	.category {
+		width: 48%;
+		height: 295px;
+		margin-right: 4%;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		&__title {
+			padding: 8px 0;
+		}
+	}
+		
+}
+
+@media(max-width: 575px) {
+		
+	.category {
+		height: 265px;
+	}
+	
+}
+@media(max-width: 490px) {
+		
+	.category {
+		height: 225px;
+	}
+}
+@media(max-width: 430px) {
+		
+	.category {
+		height: 195px;
+	}
+}
+@media(max-width: 400px) {
+		
+	.category {
+		width: 95%;
+		height: 340px;
+		margin-right: 0;
+	}
+}
+@media(max-width: 350px) {
+		
+	.category {
+		height: 295px;
+	}
+}

@@ -1,0 +1,105 @@
+.header {
+	padding: 20px;
+	background-color: $dark-gray;
+	margin-bottom: 40px;
+	@include clearfix;
+	
+	&__logo {
+		display: inline-block;
+		font-size: 31px;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	&__right-column {
+		float: right;
+	}
+	&__search {
+		position: relative;
+		display: inline-block;
+		
+		input {
+			padding: 7px 10px 7px 30px;
+			border-radius: 15px;
+			outline: none;
+		}
+		&-btn {
+			@include fa;
+			@include fa-search;
+			position: absolute;
+			top: 8px;
+			left: 8px;
+		}
+		
+	}
+	&__mobile-search-btn {
+		@include fa;
+		@include fa-search;
+		@include fa-2x;
+		display: none;
+		color: #fff;
+		margin-right: 15px;
+	}
+	&__buttons {
+		display: inline-block;
+		
+	}
+	
+	&__cart {
+		
+		&-btn {
+			color: #fff;
+			margin-right: 15px;
+		}
+		
+		
+		&-icon {
+			@include fa;
+			@include fa-cart-plus;
+			@include fa-2x;
+		}
+	}
+	&__user-btn {
+		color: #fff;
+	}
+	&__user-icon {
+		@include fa;
+		@include fa-user;
+		@include fa-2x;
+	}
+}
+
+@media(max-width: 1040px) {
+	
+	.header {
+		padding: 15px 5% 20px;
+		
+		&__logo {
+			font-size: 23px;
+			margin-top: 8px;
+		}
+		&__search {
+			input {
+				padding: 4px 10px 4px 30px;
+			}
+			i {
+				top: 5px;
+			}
+		}
+	}
+}
+
+@media(max-width: 520px) {
+	
+	.header {
+		margin-bottom: 25px;
+		
+		&__search {
+			display: none;
+		}
+		&__mobile-search-btn {
+			display: inline-block;
+		}
+	}
+}
