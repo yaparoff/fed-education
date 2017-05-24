@@ -1,0 +1,29 @@
+.footer {
+	margin: -80px auto 0;
+    height: 80px;
+    position: relative;
+	background-color: $dark-gray;
+	padding: 20px;
+	color: #fff;
+	
+	&__copyright {
+		color: #fff;
+		
+		p {
+			margin: 0;
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+@media(max-width: 1040px) {
+	.footer {
+		padding: 20px 5%;
+	}
+}
+@media(max-width: 400px) {
+	.footer {
+		text-align: center;
+	}
+}

@@ -1,0 +1,47 @@
+//@fa-font-path:   "fonts/";
+
+// Colors:
+$gray: #4f5a6e;
+$dark-gray: #424b5f;
+$blue:    #3498DB;
+$border-color: #ababad;
+
+
+@mixin clearfix {
+	zoom:1;
+  	&:before, &:after{ content:""; display:table; }
+  	&:after{ clear: both; }
+}
+
+@mixin fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@mixin fa-2x {
+	font-size: 2em;
+}
+@mixin fa-user {
+	&:before {
+		content: "\f007";
+	}
+}
+@mixin fa-search {
+	&:before {
+		content: "\f002";
+	}
+}
+@mixin fa-cart-plus {
+	&:before {
+		content: "\f217";
+	}
+}
+@mixin fa-times {
+	&:before {
+		content: "\f00d";
+	}
+}
+	

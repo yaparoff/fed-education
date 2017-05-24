@@ -1,0 +1,60 @@
+<aside class="sidebar">
+	<nav>
+		<ul class="menu">
+			<li class="menu__item">
+				<a href="#" class="menu__link">
+					<i class="menu__item-icon  menu__item-icon--tablets"></i>
+					<p>Tablets</p>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="#" class="menu__link">
+					<i class="menu__item-icon  menu__item-icon--phones"></i>
+					<p>Phones</p>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="#" class="menu__link">
+					<i class="menu__item-icon  menu__item-icon--notebooks"></i>
+					<p>Notebooks</p>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="#" class="menu__link">
+					<i class="menu__item-icon  menu__item-icon--monitors"></i>
+					<p>Monitors</p>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="#" class="menu__link">
+					<i class="menu__item-icon  menu__item-icon--pc"></i>
+					<p>PC</p>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="#" class="menu__link">
+					<i class="menu__item-icon  menu__item-icon--tv"></i>
+					<p>TV</p>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</aside>
+<div class="goods-list">
+	<script id="templateGood" type="text/x-handlebars-template">
+		{{#each goods.phones}}
+			<a href="#" class="good">
+				<div class="good__image">
+					<img src="{{url}}" alt="">
+				</div>
+				<div class="good__info">
+					<h3 class="good__title">{{name}}</h3>
+					<div class="good__price">{{price}}</div>
+					<div class="good__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit numquam culpa nulla sed eos natus ratione unde autem quas nisi dolor quis officia magnam fuga ipsam consequatur velit eius, iure?</div>
+					<span class="good__buy">Add to cart</span>
+				</div>
+			</a>
+		{{/each}}
+	</script>
+</div>
+				

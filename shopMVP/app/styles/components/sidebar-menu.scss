@@ -1,0 +1,121 @@
+.sidebar {
+	width: 18%;
+	float: left;
+	border-right: 1px solid $dark-gray;
+}
+.menu {
+	
+	&__item {
+		display: block;
+		padding-left: 15px;
+		border-bottom: 1px solid $border-color;
+		
+		&:first-child {
+			padding-top: 10px;
+		}
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 10px;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $dark-gray;
+			transition: .4s;
+			
+			.menu__link {
+				color: #fff;
+			}
+			
+		}
+		
+		&-icon {
+			display: block;
+			float: left;
+			width: 40px;
+			height: 40px;
+			background-size: 100%;
+			
+			&--tablets {
+				background-image: url('../img/icons/tablet.png');
+			}
+			&--phones {
+				background-image: url('../img/icons/phone.png');
+			}
+			&--notebooks {
+				background-image: url('../img/icons/notebook.png');
+			}
+			&--monitors {
+				background-image: url('../img/icons/monitor.png');
+			}
+			&--pc {
+				background-image: url('../img/icons/pc.png');
+			}
+			&--tv {
+				background-image: url('../img/icons/tv.png');
+			}
+		}
+		p {
+			margin: 0;
+			display: block;
+			float: left;
+			padding: 10px 0 10px 8px;
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		padding: 10px 0;
+		@include clearfix;
+		color: $dark-gray;
+	}
+}
+
+@media(max-width: 1300px) {
+	.sidebar {
+		width: 20%;
+	}
+}
+@media(max-width: 1030px) {
+	.sidebar {
+		width: 23%;
+	}
+}
+@media(max-width: 960px) {
+	.sidebar {
+		width: 26%;
+	}
+}
+@media(max-width: 800px) {
+	.sidebar {
+		width: 100%;
+		float: none;
+		border-right: none;
+		@include clearfix;
+		margin-bottom: 20px;
+	}
+	.menu {
+		&__item {
+			width: 50%;
+			float: left;
+			
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				padding-bottom: 0;
+			}
+			&:nth-last-child(2) {
+				border-bottom: none;
+			}
+		}
+	}
+}
+@media(max-width: 440px) {
+	.menu {
+		&__item {
+			width: 100%;
+			float: none;
+		}
+	}
+}

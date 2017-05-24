@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/normalize.min.css">
+    	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="css/style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    	<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    	<title>Electronics store</title>
+	</head>
+	<body>
+   		<div class="wrapper">
+   			<header class="header">
+				<a href="index.html" class="header__logo">E - store</a>
+				<div class="header__right-column">
+					<div class="header__search">
+						<i class="header__search-btn"></i>
+						<input type="text" placeholder="Search">
+					</div>
+					<i class="header__mobile-search-btn"></i>
+					<div class="header__buttons">
+						<a href="" class="header__cart-btn">
+							<i class="header__cart-icon"></i>
+						</a>
+						<a href="" class="header__user-btn">
+							<i class="header__user-icon"></i>
+						</a>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="layout-center-wrapper">
+					
+					
+				</div>	
+			</main>
+   		</div>
+    	
+    	<footer class="footer">
+    		<div class="footer__copyright">
+    			<p>&copy; 2017 E-store company</p>
+    			<p>All rights reserved</p>
+    		</div>
+    	</footer>
+    	
+    	<div class="auth-popup">
+    		<div class="auth-popup__container" id="authSign">
+				<div class="auth-popup__title">
+					Please Sign In
+					<i class="auth-popup__close"></i>
+				</div>
+				<input class="auth-popup__input" id="emailSign" type="email" placeholder="Email address" autofocus>
+				<div class="auth-popup__error-message"></div>
+				<input class="auth-popup__input" id="passwordSign" type="password" placeholder="Password">
+				<div class="auth-popup__error-message"></div>
+				<label class="auth-popup__remember">
+					<input type="checkbox" name="loginRemember" id="loginRemember">
+					Remember me
+				</label>
+				<button class="auth-popup__submit" id="authSignSubmit">Sign In</button>
+				<p class="auth-popup__sign">
+					<a href="#" id="authRegLink">Register</a>
+				</p>
+    		</div>
+    		<div class="auth-popup__container" id="authRegister">
+				<div class="auth-popup__title">
+					Registration
+					<i class="auth-popup__close"></i>
+				</div>
+				<input class="auth-popup__input" type="email" placeholder="Email address" autofocus>
+				<input class="auth-popup__input" type="password" placeholder="Password">
+				<button class="auth-popup__submit">Register</button>
+				<p class="auth-popup__sign">
+					<a href="#" id="authSignLink">Sign In</a>
+				</p>
+    		</div>
+    	</div>
+    	
+    	<script src="js/handlebars.js"></script>
+    	<script src="js/script.js"></script>
+	</body>
+</html>
