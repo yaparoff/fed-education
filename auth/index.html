@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    	<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    	<title>Auth</title>
+	</head>
+	<body>
+		<form id="form">
+			<label>Name:</label>
+			<input type="text" id="userName">
+			
+			<label>Password:</label>
+			<input type="password" id="password">
+			
+			<button class="button">Login</button>
+		</form>
+   		<p id="text"></p>
+		   
+    	<script src="js/app.js"></script>
+			<!--<script type="text/javascript">
+				var script = document.createElement('SCRIPT');
+				script.src = "https://api.vk.com/method/users.get?user_ids=210700286&fields=bdate&v=5.64&callback=callbackFunc";
+				document.getElementsByTagName("head")[0].appendChild(script);
+				function callbackFunc(result) {
+				//alert(result.response[0].first_name)
+				console.log('Добро пожаловать, ' + result.response[0].first_name + ' ' + result.response[0].last_name + '!');
+				}
+			</script>
+			 -->
+	</body>
+</html>
