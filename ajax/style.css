@@ -1,0 +1,56 @@
+body {
+    font-family: 'Open Sans';
+    font-size: 15px;
+}
+.info {
+    width: 420px;
+    margin: 50px auto 0;
+    padding: 20px;
+    border: 1px solid gray;
+}
+span {
+    font-weight: bold;
+}
+.clearfix {
+    clear: both;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.user-info__avatar {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+.user-info__about {
+    float: left;
+}
+.repo-info {
+    margin: 20px 0;
+}
+.repo-info__name {
+    width: 50%;
+    float: left;
+}
+.repo-info__issues-number {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.form__input {
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.form__submit {
+    display: block;
+    margin: 20px auto 0;
+    padding: 5px 20px;
+    cursor: pointer;
+}

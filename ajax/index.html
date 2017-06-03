@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <div class="info">
+            <div class="user-info clearfix"> 
+                <img class="user-info__avatar" src="">
+                <div class="user-info__about">     
+                    <p>Name: <span id="userName"></span></p>
+                    <p>Number of public repositories: <span id="publicRepos"></span></p>
+                </div>
+            </div>
+            <div class="repo-info clearfix">
+                <div class="repo-info__name">Name of repository:<br>
+                    <span id="repoName"></span>
+                </div>
+                <div class="repo-info__issues-number">Open issues: 
+                    <span id="issuesCount"></span>
+                </div>
+            </div>
+            <form class="form">
+                <input class="form__input" id="issueTitle" type="text" name="title" placeholder="title" required="required"/>
+                <input class="form__input" id="issueBody" type="text" name="body" placeholder="body"/>
+                <input class="form__submit" type="submit"/>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
