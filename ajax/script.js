@@ -52,11 +52,12 @@ submit.addEventListener('click', function(event) {
 });
 
 function createIssue(user, repo) {
-    if (issueTitle.value == '') {
+    if ((issueTitle.value == '') || (issueTitle.value.search(/\s/g) > -1)) {
         alert('Error! Issue title is empty!');
     } else {
         console.log(123);
-        var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
+        //var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
+        var token = '6733b08a3ef65e0dc9a1dcab2a2dc968fa0afa67';
         params = {
             "title": issueTitle.value,
             "body": issueBody.value
@@ -64,7 +65,7 @@ function createIssue(user, repo) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://api.github.com/repos/' + user + '/' + repo + '/issues', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.setRequestHeader('Authorization', 'token '+ token);
+        xhr.setRequestHeader('Authorization', 'token ' + token);
         xhr.send(JSON.stringify(params));
         xhr.onreadystatechange = function() {
             showRepositoryInfo(user, repo);
