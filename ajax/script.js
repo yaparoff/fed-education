@@ -58,7 +58,7 @@ function createIssue(user, repo) {
     } else {
         console.log(123);
         //var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
-        var token = '2feeb6b98945999a3a560a5b386216b8c65956ce';
+        var token = '78925b65250bdf28d999fc0794aa6a9c7ed00016';
         params = {
             "title": issueTitle.value,
             "body": issueBody.value
@@ -70,6 +70,10 @@ function createIssue(user, repo) {
         xhr.send(JSON.stringify(params));
         xhr.onreadystatechange = function() {
             showRepositoryInfo(user, repo);
+            setTimeout(function() {
+                location.reload();
+            }, 2000);
+
             
         }
         //location.reload();
