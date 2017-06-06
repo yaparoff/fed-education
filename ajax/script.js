@@ -24,35 +24,23 @@ function showUserInfo(user) {
 showUserInfo('yaparoff');
 
 function showRepositoryInfo(user, repo) {
-    return new Promise(function(resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        var path = 'https://api.github.com/repos/' + user + '/' + repo;
-        xhr.open('GET', path, true);
-        
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState != 4) return;
-            if (xhr.status != 200) {
-                alert( xhr.status + ': ' + xhr.statusText );
-            } else {
-                var obj = JSON.parse(xhr.responseText);
-                repoName.innerHTML = obj.name;
-                issuesCount.innerHTML = obj.open_issues_count;
-            }
-        };
-        xhr.onerror = function() {
-            reject(new Error("Error"));
-        };
-        xhr.send();
-    });
+    var xhr = new XMLHttpRequest();
+    var path = 'https://api.github.com/repos/' + user + '/' + repo;
+    xhr.open('GET', path, true);
     
-    
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+            alert( xhr.status + ': ' + xhr.statusText );
+        } else {
+            var obj = JSON.parse(xhr.responseText);
+            repoName.innerHTML = obj.name;
+            issuesCount.innerHTML = obj.open_issues_count;
+        }
+    } 
+    xhr.send();
 }
-showRepositoryInfo('yaparoff', 'fed-education')
-    .then( 
-        response => alert(`Fulfilled: ${response}`), 
-        error => alert(`Rejected: ${error}`) 
-
-    );
+showRepositoryInfo('yaparoff', 'fed-education');
 
 
 var submit = document.querySelector('.form__submit');
@@ -70,7 +58,7 @@ function createIssue(user, repo) {
     } else {
         console.log(123);
         //var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
-        var token = '47e1fec151d38d2f740e20d116e84e4db62c265b';
+        var token = '2feeb6b98945999a3a560a5b386216b8c65956ce';
         params = {
             "title": issueTitle.value,
             "body": issueBody.value
@@ -81,11 +69,9 @@ function createIssue(user, repo) {
         xhr.setRequestHeader('Authorization', 'token ' + token);
         xhr.send(JSON.stringify(params));
         xhr.onreadystatechange = function() {
-            showRepositoryInfo(user, repo)
-                .then( 
-                    response => alert(`Fulfilled: ${response}`), 
-                    error => alert(`Rejected: ${error}`) 
-                );
+            showRepositoryInfo(user, repo);
+            
         }
+        //location.reload();
     }
 }
