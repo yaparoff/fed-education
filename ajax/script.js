@@ -58,7 +58,7 @@ function createIssue(user, repo) {
     } else {
         console.log(123);
         //var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
-        var token = '78925b65250bdf28d999fc0794aa6a9c7ed00016';
+        var token = 'a02ee412474124dec452c29a2468888b4bb64924';
         params = {
             "title": issueTitle.value,
             "body": issueBody.value
@@ -68,12 +68,14 @@ function createIssue(user, repo) {
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.setRequestHeader('Authorization', 'token ' + token);
         xhr.send(JSON.stringify(params));
-        xhr.onreadystatechange = function() {
-            showRepositoryInfo(user, repo);
-            setTimeout(function() {
-                location.reload();
-            }, 2000);
+        xhr.onerror = function(e) {
 
+            console.log(e.target.status);
+            console.log('str');
+        },
+        xhr.onload = function() {
+
+            showRepositoryInfo(user, repo);
             
         }
         //location.reload();

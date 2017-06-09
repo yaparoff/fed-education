@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/normalize.min.css">
+    	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="css/style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    	
+    	<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  		<script type="text/javascript" src="dpd.js"></script>
+    	<title>Electronics store</title>
+	</head>
+	<body>
+   		<div class="wrapper">
+   			<header class="header">
+				<a href="index.html" class="header__logo">E - store</a>
+				<div class="header__right-column">
+					<div class="header__search">
+						<i class="header__search-btn"></i>
+						<input type="text" placeholder="Search">
+					</div>
+					<i class="header__mobile-search-btn"></i>
+					<div class="header__buttons">
+						<a href="" class="header__cart-btn">
+							<i class="header__cart-icon"></i>
+						</a>
+						<a href="" class="header__user-btn">
+							<i class="header__user-icon"></i>
+						</a>
+					</div>
+
+
+
+				</div>
+			</header>
+			<main class="main">
+				<div class="layout-center-wrapper">
+					<aside class="sidebar">
+						<nav>
+							<ul class="menu">
+								<li class="menu__item">
+									<a href="#" class="menu__link" id="tabletsLink">
+										<i class="menu__item-icon  menu__item-icon--tablets"></i>
+										<p>Tablets</p>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link" id="phonesLink">
+										<i class="menu__item-icon  menu__item-icon--phones"></i>
+										<p>Phones</p>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link"  id="notebooksLink">
+										<i class="menu__item-icon  menu__item-icon--notebooks"></i>
+										<p>Notebooks</p>
+									</a>
+								</li>
+						<!--		<li class="menu__item">
+									<a href="#" class="menu__link">
+										<i class="menu__item-icon  menu__item-icon--monitors"></i>
+										<p>Monitors</p>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										<i class="menu__item-icon  menu__item-icon--pc"></i>
+										<p>PC</p>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										<i class="menu__item-icon  menu__item-icon--tv"></i>
+										<p>TV</p>
+									</a>
+								</li>-->
+							</ul>
+						</nav>
+					</aside>
+					<div class="goods-list">
+						<a href="#" class="goods-list__btn  goods-list__btn--visible" id="goodsToList">List view</a>
+						<a href="#" class="goods-list__btn" id="goodsToGrid">Grid view</a>
+<!--
+						<script id="templateGood" type="text/x-handlebars-template">
+							{{#each phones}}
+								<a href="#" class="good">
+									<div class="good__image">
+										<img src="{{url}}" alt="">
+									</div>
+									<div class="good__info">
+										<h3 class="good__title">{{name}}</h3>
+										<div class="good__price">{{price}}</div>
+										<div class="good__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit numquam culpa nulla sed eos natus ratione unde autem quas nisi dolor quis officia magnam fuga ipsam consequatur velit eius, iure?</div>
+										<span class="good__buy">Add to cart</span>
+									</div>
+								</a>
+							{{/each}}
+						</script>
+-->
+<!--
+						<a href="#" class="good">
+							<div class="good__image">
+								<img src="img/goods/phone2.jpg" alt="">
+							</div>
+							<div class="good__info">
+								<h3 class="good__title">Iphone</h3>
+								<div class="good__price">$10.35</div>
+								<div class="good__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit numquam culpa nulla sed eos natus ratione unde autem quas nisi dolor quis officia magnam fuga ipsam consequatur velit eius, iure?</div>
+								<span class="good__buy">Add to cart</span>
+							</div>
+						</a>
+						<a href="#" class="good">
+							<div class="good__image">
+								<img src="img/goods/phone3.jpg" alt="">
+							</div>
+							<div class="good__info">
+								<h3 class="good__title">Iphone</h3>
+								<div class="good__price">$10.35</div>
+							</div>
+						</a>
+						<a href="#" class="good">
+							<div class="good__image">
+								<img src="img/goods/phone4.jpg" alt="">
+							</div>
+							<div class="good__info">
+								<h3 class="good__title">Iphone</h3>
+								<div class="good__price">$10.35</div>
+							</div>
+						</a>
+						<a href="#" class="good">
+							<div class="good__image">
+								<img src="img/goods/phone5.jpg" alt="">
+							</div>
+							<div class="good__info">
+								<h3 class="good__title">Iphone</h3>
+								<div class="good__price">$10.35</div>
+							</div>
+						</a>
+						<a href="#" class="good">
+							<div class="good__image">
+								<img src="img/goods/phone6.jpg" alt="">
+							</div>
+							<div class="good__info">
+								<h3 class="good__title">Iphone</h3>
+								<div class="good__price">$10.35</div>
+							</div>
+						</a>
+-->
+					</div>
+				</div>
+			</main>
+   		</div>
+    	
+    	<footer class="footer">
+    		<div class="footer__copyright">
+    			<p>&copy; 2017 E-store company</p>
+    			<p>All rights reserved</p>
+    		</div>
+    	</footer>
+    	
+    	<div class="auth-popup">
+    		<div class="auth-popup__container" id="authSign">
+				<div class="auth-popup__title">
+					Please Sign In
+					<i class="auth-popup__close"></i>
+				</div>
+				<input class="auth-popup__input" id="emailSign" type="email" placeholder="Email address" autofocus>
+				<div class="auth-popup__error-message"></div>
+				<input class="auth-popup__input" id="passwordSign" type="password" placeholder="Password">
+				<div class="auth-popup__error-message"></div>
+				<label class="auth-popup__remember">
+					<input type="checkbox" name="loginRemember" id="loginRemember">
+					Remember me
+				</label>
+				<button class="auth-popup__submit" id="authSignSubmit">Sign In</button>
+				<p class="auth-popup__sign">
+					<a href="#" id="authRegLink">Register</a>
+				</p>
+    		</div>
+    		<div class="auth-popup__container" id="authRegister">
+				<div class="auth-popup__title">
+					Registration
+					<i class="auth-popup__close"></i>
+				</div>
+				<input class="auth-popup__input" type="email" placeholder="Email address" autofocus>
+				<input class="auth-popup__input" type="password" placeholder="Password">
+				<button class="auth-popup__submit">Register</button>
+				<p class="auth-popup__sign">
+					<a href="" class="auth-popup__social"></a>
+					<a href="#" id="authSignLink">Sign In</a>
+				</p>
+    		</div>
+    	</div>
+    	
+    	<!--<script src="js/handlebars.js"></script> -->
+    	<script src="js/app.js"></script>
+	</body>
+</html>
