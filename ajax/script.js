@@ -27,7 +27,7 @@ function showRepositoryInfo(user, repo) {
     var xhr = new XMLHttpRequest();
     var path = 'https://api.github.com/repos/' + user + '/' + repo;
     xhr.open('GET', path, true);
-    xhr.send();
+    
     xhr.onreadystatechange = function() {
     if (xhr.readyState != 4) return;
         if (xhr.status != 200) {
@@ -38,6 +38,7 @@ function showRepositoryInfo(user, repo) {
             issuesCount.innerHTML = obj.open_issues_count;
         }
     } 
+    xhr.send();
 }
 showRepositoryInfo('yaparoff', 'fed-education');
 
@@ -52,11 +53,12 @@ submit.addEventListener('click', function(event) {
 });
 
 function createIssue(user, repo) {
-    if (issueTitle.value == '') {
+    if (issueTitle.value.trim == '') {
         alert('Error! Issue title is empty!');
     } else {
         console.log(123);
-        var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
+        //var token = '5b6d480daf6e887060d0d71fa107f3db0a8ffc13';
+        var token = 'a02ee412474124dec452c29a2468888b4bb64924';
         params = {
             "title": issueTitle.value,
             "body": issueBody.value
@@ -64,10 +66,18 @@ function createIssue(user, repo) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://api.github.com/repos/' + user + '/' + repo + '/issues', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.setRequestHeader('Authorization', 'token '+ token);
+        xhr.setRequestHeader('Authorization', 'token ' + token);
         xhr.send(JSON.stringify(params));
-        xhr.onreadystatechange = function() {
+        xhr.onerror = function(e) {
+
+            console.log(e.target.status);
+            console.log('str');
+        },
+        xhr.onload = function() {
+
             showRepositoryInfo(user, repo);
+            
         }
+        //location.reload();
     }
 }

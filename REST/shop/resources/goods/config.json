@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"phones": {
+			"name": "phones",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "phones",
+			"order": 0
+		},
+		"tablets": {
+			"name": "tablets",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "tablets",
+			"order": 1
+		}
+	}
+}
