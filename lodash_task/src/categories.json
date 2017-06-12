@@ -1,0 +1,26 @@
+[{
+    "id": 0,
+    "name": "phones",
+    "description": "some-description",
+    "img": "phones.jpg"
+}, {
+    "id": 1,
+    "name": "tablets",
+    "description": "some-description1",
+    "img": "tablets.jpg"
+}, {
+    "id": 2,
+    "name": "monitors",
+    "description": "some-description2",
+    "img": "monitors.jpg"
+}, {
+    "id": 3,
+    "name": "notebooks",
+    "description": "some-description3",
+    "img": "notebooks.jpg"
+}, {
+    "id": 4,
+    "name": "tv",
+    "description": "some-description4",
+    "img": "tv.jpg"
+}]
