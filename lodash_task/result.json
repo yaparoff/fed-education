@@ -1,0 +1,172 @@
+[
+    {
+        "id": 0,
+        "name": "phones",
+        "description": "some-description",
+        "img": "phones.jpg",
+        "list": [
+            {
+                "id": "1",
+                "name": "Lenovo",
+                "description": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                "img": "1.jpg",
+                "category_id": [
+                    0,
+                    3
+                ]
+            },
+            {
+                "id": "4",
+                "name": "Siemens",
+                "description": "distracted by the readable content of a page when looking at its layout. The point of using Lorem",
+                "img": "4.jpg",
+                "category_id": [
+                    0,
+                    1,
+                    3,
+                    4
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "tablets",
+        "description": "some-description1",
+        "img": "tablets.jpg",
+        "list": [
+            {
+                "id": "0",
+                "name": "Nokia",
+                "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem",
+                "img": "0.jpg",
+                "category_id": [
+                    1,
+                    3
+                ]
+            },
+            {
+                "id": "3",
+                "name": "Panasonic",
+                "description": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                "img": "3.jpg",
+                "category_id": [
+                    1,
+                    2,
+                    4
+                ]
+            },
+            {
+                "id": "4",
+                "name": "Siemens",
+                "description": "distracted by the readable content of a page when looking at its layout. The point of using Lorem",
+                "img": "4.jpg",
+                "category_id": [
+                    0,
+                    1,
+                    3,
+                    4
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "monitors",
+        "description": "some-description2",
+        "img": "monitors.jpg",
+        "list": [
+            {
+                "id": "3",
+                "name": "Panasonic",
+                "description": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                "img": "3.jpg",
+                "category_id": [
+                    1,
+                    2,
+                    4
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "notebooks",
+        "description": "some-description3",
+        "img": "notebooks.jpg",
+        "list": [
+            {
+                "id": "0",
+                "name": "Nokia",
+                "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem",
+                "img": "0.jpg",
+                "category_id": [
+                    1,
+                    3
+                ]
+            },
+            {
+                "id": "1",
+                "name": "Lenovo",
+                "description": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                "img": "1.jpg",
+                "category_id": [
+                    0,
+                    3
+                ]
+            },
+            {
+                "id": "2",
+                "name": "Samsung",
+                "description": "It is a long established fact that a reader will be dist",
+                "img": "2.jpg",
+                "category_id": [
+                    3
+                ]
+            },
+            {
+                "id": "4",
+                "name": "Siemens",
+                "description": "distracted by the readable content of a page when looking at its layout. The point of using Lorem",
+                "img": "4.jpg",
+                "category_id": [
+                    0,
+                    1,
+                    3,
+                    4
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "tv",
+        "description": "some-description4",
+        "img": "tv.jpg",
+        "list": [
+            {
+                "id": "3",
+                "name": "Panasonic",
+                "description": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                "img": "3.jpg",
+                "category_id": [
+                    1,
+                    2,
+                    4
+                ]
+            },
+            {
+                "id": "4",
+                "name": "Siemens",
+                "description": "distracted by the readable content of a page when looking at its layout. The point of using Lorem",
+                "img": "4.jpg",
+                "category_id": [
+                    0,
+                    1,
+                    3,
+                    4
+                ]
+            }
+        ]
+    }
+]
