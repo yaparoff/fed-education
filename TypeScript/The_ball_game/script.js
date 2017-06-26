@@ -13,12 +13,10 @@ var Ball = (function () {
         this._ball.style.top = (Math.random() * (this._height - this._size)) + 'px';
         this._ball.style.left = (Math.random() * (this._width - this._size)) + 'px';
         this._ball.direction = Math.random() * 3.14;
-    }
-    Ball.prototype.getPos = function () {
         this._pos = this._ball.getBoundingClientRect();
         this._ball.realTop = this._pos.top;
         this._ball.realLeft = this._pos.left;
-    };
+    }
     Ball.prototype.move = function () {
         this._ball.realTop += Math.sin(this._ball.direction) * this._S;
         this._ball.realLeft += Math.cos(this._ball.direction) * this._S;
@@ -34,4 +32,4 @@ var Ball = (function () {
     return Ball;
 }());
 var ball = new Ball();
-setInterval(ball.move.bind(ball), 100);
+setInterval(ball.move.bind(ball), 17);

@@ -1,5 +1,4 @@
 interface Moveable {
-    getPos(): void;
     move(): void;
 }
 
@@ -21,13 +20,11 @@ class Ball implements Moveable {
         this._ball.style.height =  this._size + 'px';
         this._ball.style.top = ( Math.random() * (this._height - this._size) ) + 'px';
         this._ball.style.left = ( Math.random() * (this._width - this._size) ) + 'px';
-        this._ball.direction = Math.random() * 3.14;
-    }
-    getPos() {
+        this._ball.direction = Math.random() * 6.28;
+
         this._pos = this._ball.getBoundingClientRect();
         this._ball.realTop = this._pos.top;
         this._ball.realLeft = this._pos.left;
-        
     }
     public move(): void {
         this._ball.realTop += Math.sin(this._ball.direction) * this._S;
