@@ -1,5 +1,5 @@
 interface Moveable {
-    move(): void;
+    move(): any;
 }
 
 class Ball implements Moveable {
@@ -26,7 +26,7 @@ class Ball implements Moveable {
         this._ball.realTop = this._pos.top;
         this._ball.realLeft = this._pos.left;
     }
-    public move(): void {
+    public move(): any {
         this._ball.realTop += Math.sin(this._ball.direction) * this._S;
         this._ball.realLeft += Math.cos(this._ball.direction) * this._S;
 
