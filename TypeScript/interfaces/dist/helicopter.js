@@ -88,16 +88,13 @@ var Helicopter = (function () {
         }
         return false;
     };
-    // получить координаты места посадки
-    Helicopter.prototype.getLandingPosition = function () {
-        return this._landingPosition;
-    };
-    // если можно - совершить посадку
-    Helicopter.prototype.putTransport = function () {
+    // совершаем посадку по указанным координатам, если возможно.
+    Helicopter.prototype.putTransport = function (position) {
         if (this._isCanPut) {
-            var position = this._landingPosition;
-            console.log(position);
+            this._landingPosition = position;
+            return true;
         }
+        return false;
     };
     return Helicopter;
 }());

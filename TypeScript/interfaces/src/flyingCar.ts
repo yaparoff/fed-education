@@ -4,11 +4,14 @@ class FlyingCar implements Drivable, Flyable {
     private _isRunning: boolean;
     private _distance: number;
     private _height: number;
+    private _isCanPut: boolean;
+    private _landingPosition: any;
 
     constructor() {
         this._isRunning = false;
         this._distance = 0;
         this._height = 0;
+        this._isCanPut = false;
     }
     public start() {
         this._isRunning = true;
@@ -30,10 +33,16 @@ class FlyingCar implements Drivable, Flyable {
         return false;
     }
 
-    public getLandingPosition(): any {
-
+    // совершаем посадку по указанным координатам, если возможно.
+    public putTransport(position: any) {
+        if(this._isCanPut) {
+            this._landingPosition = position;
+            return true;
+        }
+        return false;
     }
 
+    // Получить расстояние от начала.
     public getPosition(): number {
         return this._distance;
     }

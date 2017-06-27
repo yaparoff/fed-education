@@ -25,15 +25,12 @@ class Helicopter implements Flyable {
         return false;
     }
     
-    // получить координаты места посадки
-    public getLandingPosition(): any {
-        return this._landingPosition;
-    }
-    
-    // если можно - совершить посадку по указанным координатам
-    public putTransport() {
+    // совершаем посадку по указанным координатам, если возможно.
+    public putTransport(position: any): boolean {
         if(this._isCanPut) {
-            let position = this._landingPosition;
+            this._landingPosition = position;
+            return true;
         }
+        return false;
     }
 }
