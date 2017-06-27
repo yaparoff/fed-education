@@ -74,8 +74,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Helicopter = (function () {
     function Helicopter() {
         this._isRunning = false;
-        this._flyingHeight = 0;
-        this._isCanPut = false;
+        this._height = 0;
     }
     Helicopter.prototype.start = function () {
         this._isRunning = true;
@@ -83,18 +82,15 @@ var Helicopter = (function () {
     // взлететь до определенной высоты
     Helicopter.prototype.fly = function (height) {
         if (this._isRunning) {
-            this._flyingHeight += height;
+            this._height += height;
             return true;
         }
         return false;
     };
-    // совершаем посадку по указанным координатам, если возможно.
-    Helicopter.prototype.putTransport = function (position) {
-        if (this._isCanPut) {
-            this._landingPosition = position;
-            return true;
-        }
-        return false;
+    // совершаем посадку.
+    Helicopter.prototype.putTransport = function () {
+        this._height = 0;
+        this._isRunning = false;
     };
     return Helicopter;
 }());

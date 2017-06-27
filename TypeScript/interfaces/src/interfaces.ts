@@ -13,5 +13,5 @@ export interface Drivable {
 export interface Flyable {
     start(): void;
     fly(height: number): boolean;
-    putTransport(position: any): boolean;    
+    putTransport(): any;    
 }

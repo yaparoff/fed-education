@@ -76,7 +76,6 @@ var FlyingCar = (function () {
         this._isRunning = false;
         this._distance = 0;
         this._height = 0;
-        this._isCanPut = false;
     }
     FlyingCar.prototype.start = function () {
         this._isRunning = true;
@@ -95,13 +94,10 @@ var FlyingCar = (function () {
         }
         return false;
     };
-    // совершаем посадку по указанным координатам, если возможно.
-    FlyingCar.prototype.putTransport = function (position) {
-        if (this._isCanPut) {
-            this._landingPosition = position;
-            return true;
-        }
-        return false;
+    // совершаем посадку.
+    FlyingCar.prototype.putTransport = function () {
+        this._height = 0;
+        this._isRunning = false;
     };
     // Получить расстояние от начала.
     FlyingCar.prototype.getPosition = function () {

@@ -2,14 +2,11 @@ import {Flyable} from './interfaces';
 
 class Helicopter implements Flyable {
     private _isRunning: boolean;
-    private _flyingHeight: number;
-    private _isCanPut: boolean;
-    private _landingPosition: any;
+    private _height: number;
 
     constructor() {
         this._isRunning = false;
-        this._flyingHeight = 0;
-        this._isCanPut = false;
+        this._height = 0;
     }
 
     public start() {
@@ -19,18 +16,15 @@ class Helicopter implements Flyable {
     // взлететь до определенной высоты
     public fly(height: number) {
         if (this._isRunning) {
-            this._flyingHeight += height;
+            this._height += height;
             return true;
         }
         return false;
     }
     
-    // совершаем посадку по указанным координатам, если возможно.
-    public putTransport(position: any): boolean {
-        if(this._isCanPut) {
-            this._landingPosition = position;
-            return true;
-        }
-        return false;
+    // совершаем посадку.
+    public putTransport(): any {
+        this._height = 0;
+        this._isRunning = false;
     }
 }
