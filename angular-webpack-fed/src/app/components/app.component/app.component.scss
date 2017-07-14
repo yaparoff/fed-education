@@ -1,0 +1,16 @@
+@import '../../../scss/variables.scss';
+
+.shp {
+	&:host {
+		display: block;
+		height: auto;
+		min-height: 100%;
+	}
+
+	&-content {
+		padding-bottom: $footer-height;
+		width: 80%;
+    	margin: 0 auto;
+	}
+}
+

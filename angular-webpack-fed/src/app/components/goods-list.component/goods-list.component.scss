@@ -1,0 +1,140 @@
+@import '../../../scss/variables.scss';
+
+.shp-goods-list {
+  &:host {
+    // float: left;
+    position: relative;
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1%;
+    position: relative;
+    padding-top: 30px;
+  }
+  &__toggle-link {
+     position: absolute;
+     top: 0;
+     right: 0;
+     cursor: pointer;
+  }
+
+}
+
+.shp-good {
+  position: relative;
+  display: block;
+  float: left;
+  width: 19%;
+  height: 260px;
+  margin-right: 1%;
+  margin-bottom: 15px;
+  border: 1px solid #ababad;
+  cursor: pointer;
+
+  &--vertical {
+    width: 650px;
+    height: 210px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @include clearfix;
+  }
+  &__image {
+    padding: 10px;
+
+    img {
+      display: block;
+      width: 90%;
+      margin: 0 auto; 
+    }
+    
+    &--vertical {
+      width: 35%;
+      float: left; 
+    }
+  }
+  &__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4f5a6e;
+    color: #fff;
+    text-align: center;
+    padding: 6px 0;
+
+    &--vertical {
+      position: static;
+      width: 65%;
+      float: right;
+      background-color: transparent;
+      color: #424b5f;
+      text-align: left;
+      padding: 12px 10px 10px 0; 
+    }
+  }
+  &__title {
+    margin: 0;
+    text-align: center;
+    padding: 0 10px 7px;
+    font-size: 17px;
+    font-weight: bold;
+
+    &--vertical {
+      display: inline-block;
+      width: 326px;
+      text-align: left;
+      padding: 0; 
+    }
+  }
+  &__price {
+    text-align: center;
+    font-size: 16px;
+
+    &--vertical {
+      width: 80px;
+      display: inline-block;
+      text-align: right;
+      font-weight: bold; 
+    }
+  }
+  &__description {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+
+    &--vertical {
+      visibility: visible;
+      position: static;
+      height: 115px;
+      overflow: hidden;
+      left: 0;
+      padding: 17px 0 0;
+      margin-bottom: 24px;
+      text-align: justify; 
+    }
+  }
+  &__buy {
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: #3498DB;
+    color: #fff;
+    text-shadow: 1px 1px 1px #273c4a;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--vertical {
+      visibility: visible;
+      position: static;
+
+      &:hover {
+        background-color: #1d6fa5;
+        transition: .4s; 
+      }
+    }
+  }
+}

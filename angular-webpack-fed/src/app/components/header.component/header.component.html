@@ -1,0 +1,18 @@
+<div class="shp-header__logo" routerLink="/">E-Store</div>
+<div class="shp-header__right-column">
+    <div class="shp-header__search">
+        <i class="shp-header__search-btn"></i>
+        <input type="text" placeholder="Search">
+    </div>
+    <i class="shp-header__mobile-search-btn"></i>
+    <div class="shp-header__buttons">
+        <a class="shp-header__cart-btn">
+            <i class="shp-header__cart-icon"></i>
+        </a>
+        <a class="shp-header__user-btn" (click)="showPopup()">
+            <i class="shp-header__user-icon"></i>
+        </a>
+    </div>
+</div>
+
+<shp-popup></shp-popup>

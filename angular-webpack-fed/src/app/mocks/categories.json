@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "tablets",
+    "image": "https://images-eu.ssl-images-amazon.com/images/I/51IN%2Bl9Wz6L.jpg"
+  },
+  {
+    "id": 2,
+    "name": "phones",
+    "image": "https://www.cheap-phones.com/wp-content/uploads/2012/09/iphone-51.jpg"
+  },
+  {
+    "id": 3,
+    "name": "notebooks",
+    "image": "http://filex.my1.ru/_pu/0/94551903.jpg"
+  },
+  {
+    "id": 4,
+    "name": "monitors",
+    "image": "http://www.elretail.ru/pics/pics4/138322_1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "PC",
+    "image": "http://product-image.bdstall.com/giant_56173.jpg"
+  },
+  {
+    "id": 6,
+    "name": "TV",
+    "image": "http://static.hotukdeals.com/images/threads/high-res/2298115_1.jpg"
+  }
+]

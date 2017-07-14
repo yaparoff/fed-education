@@ -1,0 +1,77 @@
+@import '../../../scss/variables.scss';
+
+.shp-header {
+  &:host {
+    display: block;
+    padding: 20px;
+    background-color: $main-bg;
+    margin-bottom: 40px;
+    @include clearfix;
+  }
+  &__logo {
+    display: inline-block;
+		font-size: 31px;
+		font-weight: bold;
+		color: $main-text;
+		text-decoration: none;
+		text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__right-column {
+		float: right;
+	}
+	&__search {
+		position: relative;
+		display: inline-block;
+		
+		input {
+			padding: 7px 10px 7px 30px;
+			border-radius: 15px;
+			outline: none;
+      font-size: 14px;
+		}
+		&-btn {
+			@include fa;
+			@include fa-search;
+			position: absolute;
+			top: 8px;
+			left: 8px;
+		}
+		
+	}
+	&__mobile-search-btn {
+		@include fa;
+		@include fa-search;
+		@include fa-2x;
+		display: none;
+		color: #fff;
+		margin-right: 15px;
+	}
+	&__buttons {
+		display: inline-block;
+	}
+	&__cart {
+		
+		&-btn {
+			color: #fff;
+			margin-right: 15px;
+			cursor: pointer;
+		}
+		
+		
+		&-icon {
+			@include fa;
+			@include fa-cart-plus;
+			@include fa-2x;
+		}
+	}
+	&__user-btn {
+		color: #fff;
+		cursor: pointer;
+	}
+	&__user-icon {
+		@include fa;
+		@include fa-user;
+		@include fa-2x;
+	}
+}

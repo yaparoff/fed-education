@@ -1,0 +1,10 @@
+@import '../../../scss/variables.scss';
+
+.shp-sidebar {
+	&:host {
+		width: 18%;
+		float: left;
+		border-right: 1px solid $main-bg;
+	}
+	
+}

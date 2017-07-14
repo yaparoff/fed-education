@@ -1,0 +1,92 @@
+<!--<div *ngFor="let product of products | async">
+  <div class="shp-good__image  shp-good__image--vertical">
+    <img src="{{product.image}}" alt="{{product.name}}">
+  </div>
+</div>-->
+
+<section *ngIf="grid">
+  <a (click)="toggleView()" class="shp-goods-list__toggle-link">List View</a>
+  <!--pipe 'async' - Observable-->
+  <div class="shp-good" *ngFor="let product of products | async">
+    <div class="shp-good__image">
+      <img src="{{product.image}}" alt="{{product.name}}">
+    </div>
+    <div class="shp-good__info">
+      <h3 class="shp-good__title">{{product.name}}</h3>
+      <div class="shp-good__price">${{product.price}}</div>
+  </div>
+  </div>
+  
+</section>
+
+<section *ngIf="grid === false">
+  <a (click)="toggleView()" class="shp-goods-list__toggle-link">Grid View</a>
+  <div class="shp-good--vertical" *ngFor="let product of products | async">
+    <div class="shp-good__image  shp-good__image--vertical">
+      <img src="{{product.image}}" alt="{{product.name}}">
+    </div>
+    <div class="shp-good__info  shp-good__info--vertical">
+      <h3 class="shp-good__title  shp-good__title--vertical">{{product.name}}</h3>
+      <div class="shp-good__price  shp-good__price--vertical">${{product.price}}</div>
+      <div class="shp-good__description  shp-good__description--vertical">{{product.description}}</div>
+      <span class="shp-good__buy  shp-good__buy--vertical">Add to cart</span>
+  </div>
+  </div>
+  
+</section>
+
+<!--<ng-template #gridBlock>
+  <a (click)="toggleView('list')" class="shp-goods-list__toggle-link">List View</a>
+  <div *ngFor="let product of products | async">
+    <div class="shp-good__image">
+      <img src="{{product.image}}" alt="{{product.name}}">
+    </div>
+  </div>
+  <div class="shp-good__info">
+    <h3 class="shp-good__title">{{product.name}}</h3>
+    <div class="shp-good__price">${{product.price}}</div>
+  </div>
+</ng-template>-->
+
+<ng-template #listBlock>
+  <a (click)="toggleView('grid')" class="shp-goods-list__toggle-link">Grid View</a>
+  <div *ngFor="let product of products | async">
+    <div class="shp-good__image  shp-good__image--vertical">
+      <img src="{{product.image}}" alt="{{product.name}}">
+    </div>
+  </div>
+  <div class="shp-good__info  shp-good__info--vertical">
+    <h3 class="shp-good__title  shp-good__title--vertical">{{product.name}}</h3>
+    <div class="shp-good__price  shp-good__price--vertical">${{product.price}}</div>
+    <div class="shp-good__description  shp-good__description--vertical">{{product.description}}</div>
+    <span class="shp-good__buy  shp-good__buy--vertical">Add to cart</span>
+  </div>
+</ng-template>
+  
+<!--<section *ngIf="viewType === 'grid'">
+  <a (click)="toggleView('list')" class="shp-goods-list__toggle-link">List View</a>
+  <div *ngFor="let product of products | async">
+    <div class="shp-good__image">
+      <img src="{{product.image}}" alt="{{product.name}}">
+    </div>
+  </div>
+  <div class="shp-good__info">
+    <h3 class="shp-good__title">{{product.name}}</h3>
+    <div class="shp-good__price">${{product.price}}</div>
+  </div>
+</section>-->
+
+<!--<section *ngIf="viewType === 'list'">
+  <a (click)="toggleView('grid')" class="shp-goods-list__toggle-link">Grid View</a>
+  <div *ngFor="let product of products | async">
+    <div class="shp-good__image  shp-good__image--vertical">
+      <img src="{{product.image}}" alt="{{product.name}}">
+    </div>
+  </div>
+  <div class="shp-good__info  shp-good__info--vertical">
+    <h3 class="shp-good__title  shp-good__title--vertical">{{product.name}}</h3>
+    <div class="shp-good__price  shp-good__price--vertical">${{product.price}}</div>
+    <div class="shp-good__description  shp-good__description--vertical">{{product.description}}</div>
+    <span class="shp-good__buy  shp-good__buy--vertical">Add to cart</span>
+  </div>
+</section>-->

@@ -1,0 +1,14 @@
+@import '../../../scss/variables.scss';
+
+.shp-logo {
+  $img-height: 50px;
+
+  &:host {
+    display: inline-block;
+		font-size: 31px;
+		font-weight: bold;
+		color: $main-text;
+		text-decoration: none;
+		text-transform: uppercase;
+  }
+}

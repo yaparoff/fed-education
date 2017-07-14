@@ -1,0 +1,49 @@
+<div  class="shp-popup" *ngIf="visible">
+    <div class="shp-popup__container" id="authSign" *ngIf="signFormVisible">
+        <div class="shp-popup__title">
+            Please Sign In
+            <i class="shp-popup__close" (click)="closePopup()"></i>
+        </div>
+        <input class="shp-popup__input" 
+            type="email" 
+            placeholder="Email address" 
+            autofocus 
+            
+        >
+        <!--<div class="shp-popup__error-message" *ngIf="isValidEmail === false">Email is not valid</div>-->
+        <input class="shp-popup__input" type="password" placeholder="Password">
+        <!--<div class="shp-popup__error-message" *ngIf="isValidPassword === false"></div>-->
+        <label class="shp-popup__remember">
+            <input type="checkbox" name="loginRemember" id="loginRemember">
+            Remember me
+        </label>
+        <button class="shp-popup__submit">Sign In</button>
+        <p class="shp-popup__sign">
+            <a id="authRegLink" (click)="showRegisterForm()">Register</a>
+        </p>
+    </div>
+    <div class="shp-popup__container" id="authRegister" *ngIf="reisterFormVisible">
+        <div class="shp-popup__title">
+            Registration
+            <i class="shp-popup__close" (click)="closePopup()"></i>
+        </div>
+        <input class="shp-popup__input"
+            [ngClass]="{'shp-popup__input--invalid':!isValidEmail}"
+            type="email" placeholder="Email address" autofocus #regEmail
+            (blur)="emailValidation(regEmail.value)"
+        >
+        <div class="shp-popup__error-message" *ngIf="isValidEmail === false">Email is not valid</div>
+        <input class="shp-popup__input"
+            [ngClass]="{'shp-popup__input--invalid':!isValidPassword}"
+            type="password" placeholder="Password" #regPassword
+            (blur)="passwordValidation(regPassword.value)"
+        >
+        <div class="shp-popup__error-message" *ngIf="isValidPassword === false">
+            Your password must be longer than 3 symbols
+        </div>
+        <button class="shp-popup__submit">Register</button>
+        <p class="shp-popup__sign">
+            <a id="authSignLink" (click)="showSignForm()">Sign In</a>
+        </p>
+    </div>
+</div>    

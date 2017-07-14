@@ -1,0 +1,10 @@
+<div class="shp-categories-list__item shp-category" *ngFor="let category of categories | async" routerLink="/category/{{category.id}}">
+  <!--<img src="http://via.placeholder.com/150?text={{category.name}}" />-->
+  <div class="shp-category__image">
+    <img src={{category.image}} alt="{{category.name}}">
+  </div>
+  <h3 class="shp-category__title">
+    {{category.name}}
+    <span class="shp-category__quantity">(268)</span>
+  </h3>
+</div>

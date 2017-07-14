@@ -1,0 +1,21 @@
+@import '../../../scss/variables.scss';
+
+.shp-footer {
+  &:host {
+    display: block;
+    // margin: -80px auto 0;
+    // height: 80px;
+    position: relative;
+    background-color: $main-bg;
+    padding: 20px;
+    color: $main-text;
+  }
+    
+	&__copyright {
+    p {
+			margin: 0;
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+	}
+}

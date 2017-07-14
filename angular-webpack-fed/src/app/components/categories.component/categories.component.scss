@@ -1,0 +1,58 @@
+@import '../../../scss/variables.scss';
+
+.shp-categories-list {
+  &:host {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.shp-category {
+	position: relative;
+	display: block;
+	width: 23%;
+	height: 350px;
+	margin-right: 2%;
+	margin-bottom: 20px;
+	border: 1px solid $border-color;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		transition: 0.4s;
+
+		.shp-category__title {
+			background-color: #424b5f;
+			transition: 0.4s;
+			text-shadow: 1px 1px 1px #273c4a;
+		}
+	}
+
+  &__image {
+		padding: 10px;
+
+		img {
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	&__title {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		padding: 15px 0;
+		color: $gray;
+		text-align: center;
+		background-color: $gray;
+		color: #fff;
+	}
+	&__quantity {
+		color: #fff;
+	}
+}

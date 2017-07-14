@@ -221,14 +221,9 @@ function print(item) {
 tabletsLink.addEventListener('click', function(event) {
 	event.preventDefault();
 	goodsList.innerHTML = '';
-	dpd.tablets.get(function(arr, error) {
-		if(error) {
-			alert(error.message);
-		} else {
-			for (var i = 0; arr.length; i++) {
-				
-				print(arr[i]);
-			}
+	dpd.tablets.get(function(arr) {
+		for (var i = 0; arr.length; i++) {
+			print(arr[i]);
 		}
 	});
 });
@@ -236,13 +231,9 @@ tabletsLink.addEventListener('click', function(event) {
 phonesLink.addEventListener('click', function(event) {
 	event.preventDefault();
 	goodsList.innerHTML = '';
-	dpd.phones.get(function(arr, error) {
-		if(error) {
-			alert(error.message);
-		} else {
-			for (var i = 0; arr.length; i++) {
-				print(arr[i]);
-			}
+	dpd.phones.get(function(arr) {
+		for (var i = 0; arr.length; i++) {
+			print(arr[i]);
 		}
 	});
 });
@@ -250,35 +241,51 @@ phonesLink.addEventListener('click', function(event) {
 notebooksLink.addEventListener('click', function(event) {
 	event.preventDefault();
 	goodsList.innerHTML = '';
-	dpd.notebooks.get(function(arr, error) {
-		if(error) {
-			alert(error.message);
-		} else {
-			for (var i = 0; arr.length; i++) {
-				print(arr[i]);
-			}
+	dpd.notebooks.get(function(arr) {
+		for (var i = 0; arr.length; i++) {
+			print(arr[i]);
 		}
 	});
 });
 
+dpd.phones.del({id: 'e79516561a72c802'});
+
+
+/*
 dpd.phones.post(
 	{
-		img: 'img/goods/phone1.jpg',
-		name: 'phone2', 
+		img: 'img/goods/phone5.jpg',
+		name: 'phone3', 
 		price: 69,
 		description: 'The case is made out of polycarbonate, which is a good electrical insulator and heat- & flame- resistant. This means you can use this device in the outdoor conditions with no worry at all'
 	}
-);
+);*/
 
-dpd.phones.del({id: 'dd9a47b393835811'});
+//dpd.phones.del({id: 'dd9a47b393835811'});
 
-dpd.phones.put('92814e5b96a068de', {name: 'Iphone7', price: 1000});
+//dpd.phones.put('92814e5b96a068de', {name: 'Iphone7', price: 1000});
 },{}]},{},[1])
 
-
-
-
-
+/*
+function createGood(category, goodImg, goodName, goodPrice, goodDescr) {
+	var productData = { 
+		img: goodImg,
+		name: goodName, 
+		price: goodPrice,
+		description: goodDescr
+	};
+	fetch( '/' + category, {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(productData)
+	})
+	.then((result) => { console.log(result.status) });
+}
+createGood('phones', 'img/goods/phone4.jpg', 'phone3', 81, 'Description of phone3');
+*/
 /*
 function createGood(category, goodImg, goodName, goodPrice, goodDescr) {
 	dpd.category.post(

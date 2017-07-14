@@ -1,0 +1,12 @@
+
+    sidebar
+    <nav>
+        <ul class="shp-menu">
+            <li class="shp-menu__item" *ngFor="let category of categories | async" routerLink="/category/{{category.id}}">
+                <a href="#" class="shp-menu__link">
+                    <i class="shp-menu__item-icon"></i>
+                    <p>{{category.name}}</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
