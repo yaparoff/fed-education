@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CategoriesService } from '../../services';
+import { SortingPipe } from '../../pipes/sorting.pipe';
 
 @Component({
   selector: 'shp-goods-list',
@@ -13,19 +14,27 @@ import { CategoriesService } from '../../services';
 
 export class GoodsListComponent implements OnInit {
   public products: any;
+  // public sortType = 'DEFAULT';
+  public value:string = 'Default (a-z)'
 
   constructor(private route: ActivatedRoute, private categoriesService: CategoriesService) { }
 
   public ngOnInit(): void {
     let categoryId = this.route.snapshot.params['id'];
-
-    this.products = this.categoriesService.getCategory(parseInt(categoryId));
+    // this.categories = this.categoriesService.getCategories()
+    this.products = this.categoriesService.getProducts(categoryId);
+    // this.products = this.categoriesService.getCategory(parseInt(categoryId));
   }
 
   public grid: boolean = true;
 
-  toggleView() {
+  public toggleView() {
       this.grid = !this.grid;
+  }
+
+  public onSortingOption(event: any, typeOfSort: string){
+    this.value = event.target.value;
+    typeOfSort = this.value;
   }
 };
 

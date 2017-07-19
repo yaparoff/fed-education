@@ -1,10 +1,77 @@
 @import '../../../scss/variables.scss';
 
-.shp-sidebar {
+.shp-sidebar-menu {
 	&:host {
 		width: 18%;
 		float: left;
 		border-right: 1px solid $main-bg;
+		margin-top: 30px;
+	}
+	
+	&__item {
+		display: block;
+		padding-left: 15px;
+		border-bottom: 1px solid $border-color;
+		cursor: pointer;
+		
+		&:first-child {
+			padding-top: 10px;
+		}
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 10px;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $main-bg;
+			transition: .4s;
+			
+			.shp-sidebar-menu__link {
+				color: #fff;
+			}
+			
+		}
+		
+		&-icon {
+			display: block;
+			float: left;
+			width: 40px;
+			height: 40px;
+			background-size: 100%;
+			
+			&--tablets {
+				background-image: url('');
+			}
+			&--phones {
+				background-image: url('');
+			}
+			&--notebooks {
+				background-image: url('');
+			}
+			&--monitors {
+				background-image: url('');
+			}
+			&--pc {
+				background-image: url('');
+			}
+			&--tv {
+				background-image: url('');
+			}
+		}
+		p {
+			margin: 0;
+			display: block;
+			float: left;
+			padding: 10px 0 10px 8px;
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		padding: 10px 0;
+		@include clearfix;
+		color: $main-bg;
 	}
 	
 }

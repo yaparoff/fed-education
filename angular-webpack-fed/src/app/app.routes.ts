@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { CategoriesComponent, CategoryComponent, GoodsListComponent, NoContentComponent } from './components';
+import { CategoriesComponent, CategoryComponent, GoodsListComponent, SidebarComponent, NoContentComponent } from './components';
 
 export const ROUTES: Routes = [
   {

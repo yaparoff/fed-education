@@ -12,11 +12,20 @@ export class PopupComponent {
   private isValidEmail: boolean = true;
   private isValidPassword: boolean = false;
 
+  public signData = {
+      "email": "",
+      "password": "",
+      "isRemember": false
+  }
+  public regData = {
+      "email": "",
+      "password": "",
+  }
+
   show() {
       this.visible = true;
   }
   closePopup() {
-    console.log(this.visible);
     this.visible = !this.visible;
     this.isValidEmail = true;
     this.isValidPassword = true;
@@ -33,16 +42,15 @@ export class PopupComponent {
     this.isValidEmail = true;
     this.isValidPassword = true;
   }
-  emailValidation(email: any) {
-    if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i.test(email)) {
+  emailValidation() {
+    if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i.test(this.regData.email)){
       this.isValidEmail = true;
     } else {
       this.isValidEmail = false;
     }
   }
-  passwordValidation(password: any) {
-    console.log(password.length);
-    if (password.length >= 3) {
+  passwordValidation() {
+    if (this.regData.password.length >= 3) {
       this.isValidPassword = true;
     } else {
       this.isValidPassword = false;

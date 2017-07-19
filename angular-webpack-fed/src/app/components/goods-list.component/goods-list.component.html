@@ -4,10 +4,18 @@
   </div>
 </div>-->
 
+
+<select (change)="onSortingOption($event)" name={{sortType}} class="shp-goods-list__sorting">
+  <option disabled>Sort by</option>
+  <option>Default (a-z)</option>
+  <option>Name (z-a)</option>
+  <option>Price ▲</option>
+  <option>Price ▼</option>
+</select>
 <section *ngIf="grid">
   <a (click)="toggleView()" class="shp-goods-list__toggle-link">List View</a>
   <!--pipe 'async' - Observable-->
-  <div class="shp-good" *ngFor="let product of products | async">
+  <div class="shp-good" *ngFor="let product of products | async | sorting: value">
     <div class="shp-good__image">
       <img src="{{product.image}}" alt="{{product.name}}">
     </div>
@@ -19,9 +27,9 @@
   
 </section>
 
-<section *ngIf="grid === false">
+<section *ngIf="!grid">
   <a (click)="toggleView()" class="shp-goods-list__toggle-link">Grid View</a>
-  <div class="shp-good--vertical" *ngFor="let product of products | async">
+  <div class="shp-good--vertical" *ngFor="let product of products | async | sorting: value">
     <div class="shp-good__image  shp-good__image--vertical">
       <img src="{{product.image}}" alt="{{product.name}}">
     </div>

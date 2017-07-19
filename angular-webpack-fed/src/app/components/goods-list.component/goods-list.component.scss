@@ -5,20 +5,29 @@
     // float: left;
     position: relative;
     width: 82%;
+    min-height: 580px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 1%;
+    padding: 0 0 0 1%;
     position: relative;
-    padding-top: 30px;
+    padding-top: 35px;
   }
   &__toggle-link {
      position: absolute;
      top: 0;
-     right: 0;
+     right: 1%;
      cursor: pointer;
   }
-
+  &__sorting{
+    position: absolute;
+    top: 0;
+		height: 28px;
+		border: 1px solid $main-bg;
+		color: $main-bg;
+		padding: 3px 5px;
+		cursor:pointer;
+	}
 }
 
 .shp-good {

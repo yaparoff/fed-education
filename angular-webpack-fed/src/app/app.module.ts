@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
 import { ROUTES } from './app.routes';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }   from '@angular/http';
+
 import { 
   AppComponent,
   CategoriesComponent,
@@ -14,12 +16,15 @@ import {
   SidebarComponent,
   PopupComponent
 } from './components';
-import { CategoriesService } from './services';
+import { CategoriesService, PopupService, SidebarService } from './services';
+import { SortingPipe } from './pipes';
 
 @NgModule({
   imports: [ 
     BrowserModule, // приложение должно запускаться в браузере
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule,
+    HttpModule
   ],
   declarations: [ // определяет что в этом модуле есть
     AppComponent,
@@ -30,10 +35,13 @@ import { CategoriesService } from './services';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    PopupComponent
+    PopupComponent,
+    SortingPipe
   ],
   providers: [
-    CategoriesService
+    CategoriesService,
+    PopupService,
+    SidebarService
   ],
   bootstrap: [ // определяет главный компонент приложения который создает и добавляет Angular 2 в  index.html
     AppComponent
